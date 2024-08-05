@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #3fe9104a;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #08a31a47;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #0080ff7e;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #075100;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.oculto {
+    display: none;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div id="vista1">
+            <h1>Consulta de Usuario en GitHub</h1>
+            <form id="formularioConsulta">
+                <label for="usuarioGithub">Nombre de Usuario en GitHub:</label>
+                <input type="text" id="usuarioGithub" name="usuarioGithub" required>
+                <button type="submit">Consultar</button>
+            </form>
+            <div id="resultadoConsulta" class="oculto">
+                <h2>Nombre en GitHub:</h2>
+                <p id="nombreGithub"></p>
+                <button id="irVista2">Ir a la Vista 2</button>
+            </div>
+        </div>
+        <div id="vista2" class="oculto">
+            <h1>Registro de Datos del Usuario</h1>
+            <form id="formularioRegistro">
+                <label for="pais">Selecciona el País:</label>
+                <select id="pais" name="pais" required>}
+                </select>
+
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+                
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <h2>Datos Ingresados</h2>
+            <table id="tablaDatos">
+                <thead>
+                    <tr>
+                        <th>Nombre de GitHub</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../models/script.js"></script>
+</body>
+</html>
