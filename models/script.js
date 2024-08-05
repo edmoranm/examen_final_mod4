@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const vista2 = document.getElementById('vista2');
     const tablaDatos = document.getElementById('tablaDatos').getElementsByTagName('tbody')[0];
     const selectPais = document.getElementById('pais');
-    
+
     fetch('https://restcountries.com/v3.1/all')
         .then(response => response.json())
         .then(paises => {
